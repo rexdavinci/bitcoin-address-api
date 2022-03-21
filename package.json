@@ -1,0 +1,41 @@
+{
+  "name": "bitcoin-address-api",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Bitcoin wallet service for generating secured SegWit and Multisig (P2SH) addresses",
+  "main": "src/app/index.js",
+  "scripts": {
+    "start": "tsc && node build/index.js",
+    "dev": "ts-node-dev --respawn src/api/index.ts",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "husky install"
+  },
+  "author": "Abdulhafiz A. Ahmed (http://twitter.com/abdhafizahmed)",
+  "license": "MIT",
+  "keywords": [
+    "bitcoin",
+    "cryptocurrency"
+  ],
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.22",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.6.0",
+    "ts-node-dev": "^1.1.8"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix"
+  }
+}

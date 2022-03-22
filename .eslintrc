@@ -9,8 +9,8 @@
   "plugins": ["node", "@typescript-eslint", "prettier"],
   "extends": [
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
   "parserOptions": {
     "project": "./tsconfig.eslint.json"

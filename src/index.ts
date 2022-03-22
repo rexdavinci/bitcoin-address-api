@@ -1,1 +1,3 @@
-// console.log("Working");
+import { initServer } from "./api/app";
+
+initServer();

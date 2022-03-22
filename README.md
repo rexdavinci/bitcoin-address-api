@@ -4,7 +4,10 @@ Generates
 2. Bitcoin multisig m-of-n (P2SH) segwit addresses. Requires `m`, `n` and `publikKeys`.
 
 
-
+---
+## API Documentation
+For a detailed information about how to use the application, 
+> visit [bitcoin-address-api documentation](https://documenter.getpostman.com/view/6617513/UVsSLNEA)
 ___
 
 ## Local Usage
@@ -20,17 +23,10 @@ $ npm run tsc
 $ npm start
 ```
 
----
-## Test
+### Test
 ---
 Tests are run built with [jest (ts-jest)](https://kulshekhar.github.io/ts-jest/).
 
 ```
 $ npm test
 ```
----
-
-## Sample API
-This contains full documentation on how to use this API service
-
-> visit [bitcoin-address-api](https://bitcoin-address.com)

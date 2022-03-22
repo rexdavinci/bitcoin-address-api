@@ -10,6 +10,7 @@ const app = express();
 
 app.use(rateLimiter(config.limitRate));
 app.enable("trust proxy");
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 app.use(compression());
 app.use(helmet());
 app.use(express.json());

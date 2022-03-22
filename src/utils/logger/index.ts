@@ -3,7 +3,7 @@ import config from "../../config";
 
 const transports = [];
 
-if (config.env !== "development") {
+if (config.env === "production") {
   transports.push(
     new winston.transports.File({ filename: "error.log", level: "error" }), // if in production, record errors to assist in debugging post-production errors
     new winston.transports.File({ filename: "combined.log" })

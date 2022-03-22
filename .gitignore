@@ -3,3 +3,6 @@ build
 .env
 .eslintcache
 api.rest
+npm-debug.log
+.DS_Store
+/*.env

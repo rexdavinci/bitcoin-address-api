@@ -3,14 +3,16 @@
   "private": true,
   "version": "1.0.0",
   "description": "Bitcoin wallet service for generating secured SegWit and Multisig (P2SH) addresses",
-  "main": "src/app/index.js",
+  "main": "src/api/index.js",
   "scripts": {
-    "start": "tsc && node build/index.js",
-    "dev": "ts-node-dev --respawn src/index.ts",
+    "start": "node build/index.js",
+    "tsc": "tsc",
+    "dev": "tsnd --respawn src/index.ts",
     "lint": "eslint . --ext .ts",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest --verbose --runInBand",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "tsc"
   },
   "author": "Abdulhafiz A. Ahmed (http://twitter.com/abdhafizahmed)",
   "license": "MIT",
@@ -52,5 +54,8 @@
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix"
+  },
+  "engines": { 
+    "node": "16.x" 
   }
 }

@@ -1,4 +1,4 @@
-import winston from "winston";
+import * as winston from "winston";
 import config from "../../config";
 
 const transports = [];
@@ -26,7 +26,7 @@ const Logger = winston.createLogger({
     winston.format.splat(),
     winston.format.json()
   ),
-  defaultMeta: { service: "bitcoin-wallet-api" },
+  defaultMeta: { service: "bitcoin-address-api" },
   transports
 });
 

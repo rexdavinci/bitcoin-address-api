@@ -59,10 +59,10 @@ describe("Segwit (HD) Address Generation", () => {
       .expect(400)
       .expect("Content-Type", /application\/json/);
 
-    const { success, message } = response.body as ResponseError;
+    const { success, error } = response.body as ResponseError;
 
     expect(success).toBe(false);
-    expect(message).toBe("Invalid Mnemonic Phrase");
+    expect(error).toBe("Invalid Mnemonic Phrase");
   });
 
   test("throw error when invalid path is provided ", async () => {
@@ -76,10 +76,10 @@ describe("Segwit (HD) Address Generation", () => {
       .expect(400)
       .expect("Content-Type", /application\/json/);
 
-    const { success, message } = response.body as ResponseError;
+    const { success, error } = response.body as ResponseError;
 
     expect(success).toBe(false);
-    expect(message).toBe(`Expected BIP32Path, got String "${requestBody.path}"`);
+    expect(error).toBe(`Expected BIP32Path, got String "${requestBody.path}"`);
   });
 });
 
@@ -116,26 +116,8 @@ describe("P2SH Multisig (m-of-n) Address Generation", () => {
       .expect(400)
       .expect("Content-Type", /application\/json/);
 
-    const { success, message } = response.body as ResponseError;
+    const { success, error } = response.body as ResponseError;
     expect(success).toBe(false);
-    expect(message).toBe("Required Signers More Than Total Signers");
+    expect(error).toBe("Required Signers More Than Total Signers");
   });
-
-  // test("throw error if required signers are more than available signers", async() => {
-  //   const requestBody = {
-  //     m: 3,
-  //     n: 5,
-  //     publicKeys: ['a', 'b', 'c']
-  //   }
-
-  //   const response = await addressAPI
-  //     .post(`${baseUrl}/multisig-address`)
-  //     .send(requestBody)
-  //     .expect(400)
-  //     .expect('Content-Type', /application\/json/)
-
-  //   const { success, message } = response.body
-  //   expect(success).toBe(false)
-  //   expect(message).toBe("Required Signers More Than Total Signers")
-  // })
 });

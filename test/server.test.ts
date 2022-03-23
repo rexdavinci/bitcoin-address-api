@@ -16,10 +16,10 @@ describe("Server", () => {
 
   test("handle unknown endpoint correctly", async () => {
     const response = await serverAPI
-      .get("/api/rtr")
+      .get("/api/satoshi")
       .expect(404)
       .expect("Content-Type", /application\/json/);
-    const { message } = response.body as ResponseError;
-    expect(message).toBe("Unknown Endpoint");
+    const { error } = response.body as ResponseError;
+    expect(error).toBe("Unknown Endpoint");
   });
 });

@@ -6,7 +6,6 @@
   "main": "src/api/index.js",
   "scripts": {
     "start": "node build/index.js",
-    "tsc": "tsc",
     "dev": "tsnd --respawn src/index.ts",
     "lint": "eslint . --ext .ts",
     "lint:fix": "npm run lint -- --fix",
@@ -18,7 +17,9 @@
   "license": "MIT",
   "keywords": [
     "bitcoin",
-    "cryptocurrency"
+    "cryptocurrency",
+    "crypto wallet",
+    "address generator"
   ],
   "devDependencies": {
     "@types/compression": "^1.7.2",

@@ -1,8 +1,8 @@
 {
-  "name": "bitcoin-address-api",
+  "name": "wallet-api",
   "private": true,
   "version": "1.0.0",
-  "description": "Bitcoin wallet service for generating secured SegWit and Multisig (P2SH) addresses",
+  "description": "Bitcoin wallet api service for generating secure SegWit and Multisig (P2SH) addresses",
   "main": "src/api/index.js",
   "scripts": {
     "start": "node build/index.js",

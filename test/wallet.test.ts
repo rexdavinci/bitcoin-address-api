@@ -11,8 +11,8 @@ const publicKeys = [
   "03bbc18e91a9d4dcb3c8e3f0cef3b018667bc3bc3335f9974833d208b63dba567b"
 ];
 
-describe("Segwit (HD) Address Generation", () => {
-  test("generate correct address with given path and seed", async () => {
+describe("Generate a (HD) SegWit bitcoin address from a given seed and path", () => {
+  test("generates correct address with given path and seed", async () => {
     const requestBody = {
       seed: "toward village recycle federal fiber health suspect warfare sausage hero erode order",
       path: `m/84'/0'/0'/0/0`
@@ -30,7 +30,7 @@ describe("Segwit (HD) Address Generation", () => {
     expect(data.path).toBe(requestBody.path);
   });
 
-  test("generate another correct address with different path and same seed", async () => {
+  test("generates another correct address with different path and same seed", async () => {
     const requestBody = {
       seed: "toward village recycle federal fiber health suspect warfare sausage hero erode order",
       path: `m/84'/0'/0'/0/1`
@@ -83,8 +83,8 @@ describe("Segwit (HD) Address Generation", () => {
   });
 });
 
-describe("P2SH Multisig (m-of-n) Address Generation", () => {
-  test("creates correct multisig address for the supplied public keys", async () => {
+describe("Generate an m-of-n Multisignature (multi-sig) Pay-To-Script-Hash (P2SH) bitcoin address,", () => {
+  test("generates correct multisig address for the supplied public keys", async () => {
     const requestBody = {
       m: 3,
       n: 4,

@@ -1,5 +1,5 @@
 import Joi from "joi";
-import { IHDSegwitAddress, IMultisigP2SH } from "../address";
+import { IHDSegwitAddress, IMultisigP2SH } from "../wallet";
 
 const validator = {
   validateHDSegwit: (value: IHDSegwitAddress) =>

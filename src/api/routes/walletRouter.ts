@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { generateHDSegwitAddress, generateP2SHMultisigAddress } from "../controllers/addressController";
+import { generateHDSegwitAddress, generateP2SHMultisigAddress } from "../controllers/walletController";
 
 const appRouter = Router();
 

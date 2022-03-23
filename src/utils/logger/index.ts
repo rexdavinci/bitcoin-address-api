@@ -26,7 +26,7 @@ const Logger = winston.createLogger({
     winston.format.splat(),
     winston.format.json()
   ),
-  defaultMeta: { service: "bitcoin-address-api" },
+  defaultMeta: { service: "bitcoin-wallet-api" },
   transports
 });
 

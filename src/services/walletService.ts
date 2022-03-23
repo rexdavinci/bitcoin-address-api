@@ -4,7 +4,7 @@ import * as ecc from "tiny-secp256k1";
 import { BIP32Interface } from "bip32";
 import { Logger } from "../utils";
 import * as bitcoinjs from "bitcoinjs-lib";
-import { IHDSegwitAddress, IMultisigP2SH } from "../utils/address";
+import { IHDSegwitAddress, IMultisigP2SH } from "../utils/wallet";
 
 export default class BitcoinAddressService {
   // Generate HD (Segwit) bitcoin address

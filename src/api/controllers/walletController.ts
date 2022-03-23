@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { validator, IHDSegwitAddress, IMultisigP2SH } from "../../utils";
-import BitcoinAddressService from "../../services/addressService";
+import BitcoinAddressService from "../../services/walletService";
 
 // handle segwit address generation
 export const generateHDSegwitAddress = (req: Request, res: Response, next: NextFunction) => {

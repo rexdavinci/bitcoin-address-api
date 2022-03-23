@@ -1,11 +1,11 @@
-## Bitcoin Address Generator
+## Bitcoin Wallet API
 Generates 
 1. Bitcoin segwit addresses. Requires `path` and `seed`.
 2. Bitcoin multisig m-of-n (P2SH) segwit addresses. Requires `m`, `n` and `publikKeys`.
 
 
 ## API Documentation
-For a detailed information about how to use the application visit [bitcoin-address-api documentation](https://documenter.getpostman.com/view/6617513/UVsSLNEA)
+For a detailed information on how to use the application, check the [documentation](https://documenter.getpostman.com/view/6617513/UVsSLNEA).
 
 
 ## Local Usage

@@ -7,7 +7,7 @@ A wallet service that can be used to generate
 2. bitcoin multisig m-of-n (P2SH) segwit addresses. Requires
     - `n` (total number of eligible signers)
     - `m` (number of required signatures necessary to perform a multisig transaction)
-    - `publikKeys` (an array of public keys of all eligible signers)
+    - `publicKeys` (an array of public keys of all eligible signers)
     (e.g a multisig that has 4 eligible signers and requires 3 signatures will have `n` = 4 and `m`= 3)
 
 ## API Documentation
